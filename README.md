@@ -1,21 +1,21 @@
 # surfaceome_explorer
 An interactive web tool designed to streamline cell-surface protein identification from quantitative proteomics datasets.
 
-## Landing Page
+## landing page
 
 ![Landing Page](landing_page.png)
 
-## Surfaceome Analysis
+## surfaceome analysis
 
 ![Surfaceome Dashboard](surfaceome_analysis.png)
 
-#### Features:
-- Data quality control
-- Missing value estimation
-- Normalization
-- Surfaceome filtering
-- Interactive visualizations
-- Exportable analysis reports
+#### features:
+- data quality control
+- missing value estimation
+- normalization
+- surfaceome filtering
+- interactive visualizations
+- exportable analysis reports
 
 
 
@@ -23,4 +23,4 @@ An interactive web tool designed to streamline cell-surface protein identificati
 
 
 
-##### Disclaimer: Surfaceome Explorer is intended for exploratory analysis of quantitative proteomics datasets. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
+##### disclaimer: surfaceome explorer is intended for exploratory analysis of quantitative proteomics datasets. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
