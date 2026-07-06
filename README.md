@@ -3,7 +3,7 @@ an interactive web tool designed to streamline cell-surface protein identificati
 
 ## landing page
 
-![Landing Page](landing_page.png)
+![Landing Page](SE_landing_page.png)
 
 ## surfaceome analysis
 
