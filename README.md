@@ -6,8 +6,8 @@ an interactive web tool designed to streamline cell-surface protein identificati
 ![Landing Page](SE_landing_page.png)
 
 ## surfaceome analysis
+<img width="1456" height="836" alt="surfaceome-explorer-demo" src="https://github.com/user-attachments/assets/c72e8f58-69bb-4e34-a274-4eb2e4d0e57b" />
 
-![Surfaceome Dashboard](surfaceome_analysis.png)
 
 #### features:
 - data quality control
