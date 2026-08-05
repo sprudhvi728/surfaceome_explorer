@@ -13,7 +13,7 @@ an interactive web tool designed to streamline cell-surface protein identificati
 
 ---
 
-## Overview
+## overview
 
 Surfaceome Explorer is a self-contained, single-file web application for interactive exploration of cell-surface proteomics datasets. It is designed to assist researchers in quantitative proteomics, cell biology, and mass spectrometry in rapidly inspecting, annotating, and visualizing surfaceome data — the subset of the proteome exposed at or near the plasma membrane.
 
@@ -21,13 +21,16 @@ The tool accepts pre-processed quantitative proteomics input and cross-reference
 
 The entire application runs locally in the user's browser. No data is uploaded to any external server.
 
-## surfaceome analysis
-<img width="1456" height="836" alt="surfaceome-explorer-demo" src="https://github.com/user-attachments/assets/c72e8f58-69bb-4e34-a274-4eb2e4d0e57b" />
+## data analysis demo
+<p align="center">
+        <img width="75%" height="75%" alt="demo" src="https://github.com/user-attachments/assets/a22a2c59-e248-43ea-9644-1cdfa2cb7326" />
+</p>
+
 
 
 ---
 
-## Key Features
+## key features
 
 - **Zero-installation deployment** — a single `.html` file that runs in any modern browser without dependencies, server access, or internet connection after initial load
 - **Multi-database surfaceome annotation** — cross-references detected proteins against SURFY (in silico surfaceome), UniProt Cell Membrane (KW-1003), and the Membrane-Associated dataset of Almén et al.
@@ -41,7 +44,7 @@ The entire application runs locally in the user's browser. No data is uploaded t
 
 ---
 
-## Workflow
+## workflow
 
 ```
 Quantitative proteomics input
@@ -73,11 +76,11 @@ Quantitative proteomics input
 
 ---
 
-## Installation
+## installation
 
 No installation is required. Surfaceome Explorer is a single HTML file that runs entirely in the browser.
 
-**To use:**
+**to use:**
 
 1. Download `surfaceome-explorer-v2.html` from the [Releases](https://github.com/sprudhvi728/mzML_explorer/releases) page (or clone this repository).
 2. Open the file in a modern web browser (Chrome, Firefox, Edge, or Safari — version released 2022 or later recommended).
@@ -85,11 +88,11 @@ No installation is required. Surfaceome Explorer is a single HTML file that runs
 
 No Python, R, Node.js, or any other runtime is required.
 
-> **Browser compatibility:** The application has been developed and tested primarily in Google Chrome. Functionality in other browsers is expected but has not been exhaustively verified across all features.
+> **browser compatibility:** The application has been developed and tested primarily in Google Chrome. Functionality in other browsers is expected but has not been exhaustively verified across all features.
 
 ---
 
-## Required Input Format
+## required input format
 
 Surfaceome Explorer currently accepts **tab-separated value (.tsv) or comma-separated value (.csv) files** produced by standard label-free quantification (LFQ) pipelines. The expected format is a protein-level quantification matrix in which:
 
@@ -97,24 +100,24 @@ Surfaceome Explorer currently accepts **tab-separated value (.tsv) or comma-sepa
 - Each **column** (beyond the identifier columns) represents a sample or replicate
 - Abundance values should be **log2-transformed LFQ intensities** or equivalent pre-processed values; missing values should be represented as empty cells or `NaN`
 
-### Minimum required columns
+### minimum required columns
 
 | Column | Description |
 |--------|-------------|
 | `Protein IDs` or `Accession` | UniProt accession (e.g., `P12345`) |
 | One or more sample columns | Numeric abundance values per replicate |
 
-### Group / sample mapping
+### group / sample mapping
 
 After upload, a mapping interface allows assignment of each sample column to an experimental group (e.g., *Control*, *Treatment*). At least two groups, each with at least two replicates, are required for differential analysis.
 
-> **Compatibility note:** This input format is consistent with output from **MaxQuant** (`proteinGroups.txt`, filtered), **Perseus**, and similar tools. Direct parsing of raw mass spectrometry files (mzML, raw, wiff) is not currently supported. Future versions are planned to include direct mzML parsing; early-stage mzML reading has been prototyped and tested on small example files, but broader compatibility has not yet been validated.
+> **compatibility note:** This input format is consistent with output from **MaxQuant** (`proteinGroups.txt`, filtered), **Perseus**, and similar tools. Direct parsing of raw mass spectrometry files (mzML, raw, wiff) is not currently supported. Future versions are planned to include direct mzML parsing; early-stage mzML reading has been prototyped and tested on small example files, but broader compatibility has not yet been validated.
 
 ---
 
-## Analysis Pipeline
+## analysis pipeline
 
-### 1. Protein filtering and annotation
+### 1. protein filtering and annotation
 
 After upload, detected proteins are filtered to remove known contaminants and reverse-sequence hits (columns flagged in MaxQuant output). Each remaining protein is cross-referenced against the three surfaceome reference databases using UniProt accession matching. Proteins are assigned to one or more database categories:
 
@@ -122,21 +125,21 @@ After upload, detected proteins are filtered to remove known contaminants and re
 - **UniProt Cell Membrane (KW-1003)** — experimentally annotated plasma membrane proteins from UniProt
 - **Membrane-Associated (MA)** — a curated membrane-associated dataset
 
-### 2. Group-wise abundance summarization
+### 2. group-wise abundance summarization
 
 For each protein and experimental group, mean abundance and standard deviation are calculated from the available replicates. Proteins detected in fewer than 50% of replicates within a group are flagged as low-confidence detections in that group.
 
-### 3. Differential abundance analysis
+### 3. differential abundance analysis
 
 Pairwise differential analysis is performed for each group comparison across the set of UniProt Cell Membrane (KW-1003) proteins. For each protein detected in both groups:
 
-- **Fold change** is computed as log₂(mean group B / mean group A)
-- **Statistical significance** is assessed using **Welch's *t*-test** (unequal variance), appropriate for small and unequal sample sizes
-- **Multiple testing correction** is applied using the **Benjamini–Hochberg** procedure to compute per-protein FDR values
+- **fold change** is computed as log₂(mean group B / mean group A)
+- **statistical significance** is assessed using **Welch's *t*-test** (unequal variance), appropriate for small and unequal sample sizes
+- **multiple testing correction** is applied using the **Benjamini–Hochberg** procedure to compute per-protein FDR values
 
 Proteins with *p* < 0.05 are highlighted in the differential tables. Volcano plot coloring uses *p* < 0.05 as the significance threshold.
 
-### 4. Priority scoring
+### 4. priority scoring
 
 A composite priority score is assigned to each detected surface protein, integrating:
 
@@ -153,7 +156,7 @@ This score is intended to assist in prioritizing candidates for follow-up experi
 
 ---
 
-## Reference Databases
+## reference databases
 
 | Database | Description | Version / Source |
 |----------|-------------|------------------|
@@ -165,7 +168,7 @@ Database annotation files are bundled within the application at build time. Futu
 
 ---
 
-## Downloadable Outputs
+## downloadable outputs
 
 All exports are generated client-side and downloaded directly to the user's machine.
 
@@ -181,7 +184,7 @@ All exports are generated client-side and downloaded directly to the user's mach
 
 ---
 
-## Biological Interpretation
+## biological interpretation
 
 Surfaceome Explorer is designed to assist in the **exploratory analysis** of cell-surface proteomics data. Key outputs to consider:
 
@@ -197,7 +200,7 @@ Surfaceome Explorer is designed to assist in the **exploratory analysis** of cel
 
 ---
 
-## Citation
+## citation
 
 If you use Surfaceome Explorer in your research, please cite:
 
@@ -208,7 +211,7 @@ A `CITATION.cff` file is included in this repository for citation manager compat
 
 ---
 
-## Acknowledgements
+## references
 
 Reference databases used in Surfaceome Explorer are derived from the following published resources:
 
@@ -216,7 +219,7 @@ Reference databases used in Surfaceome Explorer are derived from the following p
 - **UniProt:** The UniProt Consortium (2023). UniProt: the Universal Protein Knowledgebase in 2023. *Nucleic Acids Research* 51(D1):D523–D531. https://doi.org/10.1093/nar/gkac1052
 - **Membrane-Associated dataset:** Almén MS, Nordström KJ, Fredriksson R, Schiöth HB (2009). Mapping the human membrane proteome: a majority of the human membrane proteins can be classified according to function and evolutionary origin. *BMC Biology* 7:50. https://doi.org/10.1186/1741-7007-7-50
 
-Statistical methodology:
+statistical methodology:
 - **Welch's *t*-test:** Welch BL (1947). The generalization of "Student's" problem when several different population variances are involved. *Biometrika* 34(1–2):28–35.
 - **Benjamini–Hochberg FDR:** Benjamini Y, Hochberg Y (1995). Controlling the false discovery rate: a practical and powerful approach to multiple testing. *J Royal Statistical Society B* 57(1):289–300.
 
