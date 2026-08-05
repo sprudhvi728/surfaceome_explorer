@@ -1,10 +1,10 @@
 # surfaceome_explorer
 
-The plasma membrane serves as the interface between the cell and its its microenvironment, directing processes such as cell-cell communication, immune recognition, adhesion, and signal transduction. 
+The plasma membrane serves as the interface between the cell and its microenvironment, directing processes such as cell-cell communication, immune recognition, adhesion, and signal transduction. 
 
 Extracellular cell surface proteins are highly accessible to therapeutic antibodies and engineered immune cells; they represent an important source of biomarkers and immunotherapy targets. Yet, distinguishing proteins localized on the extracellular cell surface from those that are membrane-associated or more broadly annotated as plasma membrane proteins often requires manually integrating multiple annotation resources and statistical analyses.
 
-No single reference resource completely captures the complexity of plasma membrane protein localization. Surfaceome Explorer integrates these complementary resources into a single interactive tool to prioritize candidate proteins for downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
+No single reference resource completely captures the complexity of plasma membrane protein localization. Surfaceome Explorer integrates these complementary resources into a unified interactive tool to prioritize candidate proteins for downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
 
 > **Note:** This is an exploratory data analysis and hypothesis generation. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
