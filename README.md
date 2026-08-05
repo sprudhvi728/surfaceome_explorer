@@ -1,8 +1,8 @@
 # surfaceome_explorer
 
-The cell membrane acts as the communication hub to the cellular microenvironment, directing processes like cell-cell communication, immune recognition, adhesion, and signal transduction. 
+The plasma membrane serves as the communication hub to the cellular microenvironment, directing processes like cell-cell communication, immune recognition, adhesion, and signal transduction. 
 
-Most extracellular surface proteins are highly accessible to therapeutic antibodies and engineered immune cells, they represent an important source of biomarkers and immunotherapy targets. Yet, distinguishing proteins that reside on the extracellular cell surface from those that are membrane-associated or more broadly annotated as plasma membrane proteins often requires manually integrating multiple annotation resources and statistical methods.
+Most extracellular surface proteins are highly accessible to therapeutic antibodies and engineered immune cells; they represent an important source of biomarkers and immunotherapy targets. Yet, distinguishing proteins localized on the extracellular cell surface from those that are membrane-associated or more broadly annotated as plasma membrane proteins often requires manually integrating multiple annotation resources and statistical analyses.
 
 Surfaceome Explorer streamlines this process in a single interactive tool to prioritize candidate proteins for further downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
