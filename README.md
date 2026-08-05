@@ -4,7 +4,7 @@ The plasma membrane serves as the interface between the cell and its microenviro
 
 Extracellular cell surface proteins are highly accessible to therapeutic antibodies and engineered immune cells; they represent an important source of biomarkers and immunotherapy targets. Yet, distinguishing proteins localized on the extracellular cell surface from those that are membrane-associated or more broadly annotated as plasma membrane proteins often requires manually integrating multiple annotation resources and statistical analyses.
 
-No single reference resource completely captures the complexity of plasma membrane protein localization. Surfaceome Explorer integrates these complementary resources into a unified interactive tool to prioritize candidate proteins for downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
+No single reference resource completely captures the complexity of plasma membrane protein localization. Surfaceome Explorer integrates these complementary resources into a unified analytical workflow to prioritize candidate proteins for downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
 
 > **Note:** This is an exploratory data analysis tool for hypothesis generation. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
@@ -18,7 +18,7 @@ No single reference resource completely captures the complexity of plasma membra
 
 ## overview
 
-Surfaceome Explorer is a web-based application for interactive exploration of cell-surface proteins by assisting researchers in rapidly inspecting, annotating, and visualizing quantitative datasets.
+Surfaceome Explorer is a web-based application that provides a framework for interpreting quantitative proteomics datasets through integrated surfaceome annotation, differential abundance analysis, visualization, and candidate prioritization.
 
 The tool accepts pre-processed quantitative proteomics input (peptide reports from DIA-NN, FragPipe, MaxQuant, etc.) and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
 
@@ -85,7 +85,7 @@ No installation is required. Surfaceome Explorer is a single HTML file that runs
 
 **to use:**
 
-1. Download `surfaceome-explorer-v2.html` from the [Releases](https://github.com/sprudhvi728/mzML_explorer/releases) page (or clone this repository).
+1. Download `surfaceome-explorer-v2.html` from the [Releases](https://github.com/sprudhvi728/surfaceome_explorer) page (or clone this repository).
 2. Open the file in a web browser (Chrome recommended).
 3. Upload your data file using the interface on the first tab.
 
