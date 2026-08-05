@@ -7,7 +7,7 @@ Most extracellular surface proteins are highly accessible to therapeutic antibod
 Surfaceome Explorer streamlines this process in a single interactive tool to prioritize candidate proteins for further downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
 
-> **Note:** This is an exploratory data analysis and hypothesis generation. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
+> **Note:** This is an exploratory data analysis and hypothesis generation. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
 
 
 ## landing page
