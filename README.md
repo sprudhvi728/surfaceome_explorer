@@ -201,16 +201,6 @@ Surfaceome Explorer is designed to assist in the **exploratory analysis** of cel
 
 > **Intended use:** Surfaceome Explorer is a hypothesis-generation tool. It is designed to help researchers identify candidate proteins for follow-up validation (e.g., flow cytometry, immunofluorescence, proximity labeling, or targeted mass spectrometry). It is not intended for clinical decision-making or as a standalone analytical conclusion.
 
----
-
-## citation
-
-If you use Surfaceome Explorer in your research, please cite:
-
-> Prudhvi, S. (2026). *Surfaceome Explorer: An interactive browser-based tool for visualization and differential analysis of cell surface proteomics data* (Version 2.0). GitHub. https://github.com/sprudhvi728/mzML_explorer
-
-A `CITATION.cff` file is included in this repository for citation manager compatibility.
-
 
 ---
 
