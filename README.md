@@ -2,7 +2,7 @@
 
 The cell membrane acts as the communication hub to the cellular microenvironment, directing processes like cell-cell communication, immune recognition, adhesion, and signal transduction. 
 
-Most extracellular surface proteins are highly accessible to therapeutic antibodies and engineered immune cells, they represent an important source of biomarkers and immunotherapy targets. Yet, it is often a challenge to determine which proteins reside in the plasma membrane and how they are localized within the membrane. Identifying a small subset of proteins from quantitative proteomics experimental data often requires manually integrating multiple annotation resources and statistical methods.
+Most extracellular surface proteins are highly accessible to therapeutic antibodies and engineered immune cells, they represent an important source of biomarkers and immunotherapy targets. Yet, distinguishing proteins that reside on the extracellular cell surface from those that are membrane-associated or more broadly annotated as plasma membrane proteins often requires manually integrating multiple annotation resources and statistical methods.
 
 Surfaceome Explorer streamlines this process in a single interactive tool to prioritize candidate proteins for further downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
@@ -18,9 +18,9 @@ Surfaceome Explorer streamlines this process in a single interactive tool to pri
 
 ## overview
 
-Surfaceome Explorer is a web application for interactive exploration of cell-surface proteomics datasets. It is designed to assist researchers in quantitative proteomics of cell biology in rapidly inspecting, annotating, and visualizing surfaceome data.
+Surfaceome Explorer is a web-based application for interactive exploration of cell-surface proteins by assisting researchers in rapidly inspecting, annotating, and visualizing quantitative datasets.
 
-The tool accepts pre-processed quantitative proteomics input and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
+The tool accepts pre-processed quantitative proteomics input (peptide reports from DIA-NN, FragPipe, MaxQuant, etc.) and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
 
 The entire application runs locally in the user's browser. No data is uploaded to any external server.
 
