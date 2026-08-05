@@ -1,8 +1,6 @@
 # surfaceome_explorer
 an interactive web tool designed to streamline cell-surface protein identification from quantitative proteomics datasets.
 
-[![Status: Prototype](https://img.shields.io/badge/Status-Prototype-orange.svg)](https://github.com/sprudhvi728/mzML_explorer)
-[![No dependencies](https://img.shields.io/badge/Dependencies-none-brightgreen.svg)](https://github.com/sprudhvi728/mzML_explorer)
 
 > **Note:** Surfaceome Explorer is an early-stage prototype intended for exploratory data analysis and hypothesis generation. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
 
