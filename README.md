@@ -1,5 +1,10 @@
 # surfaceome_explorer
-an interactive web tool designed to streamline cell-surface protein identification from quantitative proteomics datasets.
+
+The cell membrane acts as the communication hub to the cellular microenvironment, directing processes like cell-cell communication, immune recognition, adhesion, and signal transduction. 
+
+Most extracellular surface proteins are highly accessible to therapeutic antibodies and engineered immune cells, they represent an important source of biomarkers and immunotherapy targets. Yet, it is often a challenge to determine which proteins reside in the plasma membrane and how they are localized within the membrane. Identifying a small subset of proteins from quantitative proteomics experimental data often requires manually integrating multiple annotation resources and statistical methods.
+
+Surfaceome Explorer streamlines this process in a single interactive tool to prioritize candidate proteins for further downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
 
 > **Note:** Surfaceome Explorer is an exploratory data analysis and hypothesis generation. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
