@@ -7,7 +7,7 @@ Extracellular cell surface proteins are highly accessible to therapeutic antibod
 No single reference resource completely captures the complexity of plasma membrane protein localization. Surfaceome Explorer integrates these complementary resources into a unified interactive tool to prioritize candidate proteins for downstream experimental validation using methods such as flow cytometry, immunofluorescence microscopy, proximity labeling, or targeted mass spectrometry. 
 
 
-> **Note:** This is an exploratory data analysis and hypothesis generation. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
+> **Note:** This is an exploratory data analysis tool for hypothesis generation. Protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
 
 
 ## landing page
@@ -86,7 +86,7 @@ No installation is required. Surfaceome Explorer is a single HTML file that runs
 **to use:**
 
 1. Download `surfaceome-explorer-v2.html` from the [Releases](https://github.com/sprudhvi728/mzML_explorer/releases) page (or clone this repository).
-2. Open the file in a modern web browser (Chrome, Firefox, Edge, or Safari — version released 2022 or later recommended).
+2. Open the file in a web browser (Chrome recommended).
 3. Upload your data file using the interface on the first tab.
 
 No Python, R, Node.js, or any other runtime is required.
@@ -191,7 +191,7 @@ All exports are generated client-side and downloaded directly to the user's mach
 
 Surfaceome Explorer is designed to assist in the **exploratory analysis** of cell-surface proteomics data. Key outputs to consider:
 
-**Database overlap** measures the degree of co-annotation across databases for your detected proteins. A large proportion of proteins annotated by SURFY but absent from UniProt Cell Membrane may indicate the presence of predicted but not yet experimentally confirmed surface proteins. These represent biologically interesting candidates but should be interpreted cautiously.
+**Database overlap** measures the degree of co-annotation across databases for your detected proteins. A large proportion of proteins annotated by SURFY but absent from UniProt Cell Membrane may indicate predicted but not yet experimentally confirmed surface proteins. These represent biologically interesting candidates but should be interpreted cautiously.
 
 **High group-overlap Venn diagrams** (>85% shared proteins) indicate that the experimental conditions share a largely conserved surface proteome. Differences in the small unique-to-group fractions may be biologically meaningful even when modest in number.
 
@@ -199,7 +199,6 @@ Surfaceome Explorer is designed to assist in the **exploratory analysis** of cel
 
 **Priority scores** are heuristic and unvalidated. They are intended to guide experimental prioritization, not to replace biological judgment or rigorous statistical inference.
 
-> **Intended use:** Surfaceome Explorer is a hypothesis-generation tool. It is designed to help researchers identify candidate proteins for follow-up validation (e.g., flow cytometry, immunofluorescence, proximity labeling, or targeted mass spectrometry). It is not intended for clinical decision-making or as a standalone analytical conclusion.
 
 
 ---
