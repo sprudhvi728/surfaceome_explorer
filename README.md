@@ -2,7 +2,7 @@
 an interactive web tool designed to streamline cell-surface protein identification from quantitative proteomics datasets.
 
 
-> **Note:** Surfaceome Explorer is an early-stage prototype intended for exploratory data analysis and hypothesis generation. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
+> **Note:** Surfaceome Explorer is an exploratory data analysis and hypothesis generation. protein annotations are based on curated public databases and should be interpreted alongside experimental evidence.
 
 
 ## landing page
@@ -13,7 +13,7 @@ an interactive web tool designed to streamline cell-surface protein identificati
 
 ## overview
 
-Surfaceome Explorer is a self-contained, single-file web application for interactive exploration of cell-surface proteomics datasets. It is designed to assist researchers in quantitative proteomics, cell biology, and mass spectrometry in rapidly inspecting, annotating, and visualizing surfaceome data — the subset of the proteome exposed at or near the plasma membrane.
+Surfaceome Explorer is a web application for interactive exploration of cell-surface proteomics datasets. It is designed to assist researchers in quantitative proteomics of cell biology in rapidly inspecting, annotating, and visualizing surfaceome data.
 
 The tool accepts pre-processed quantitative proteomics input and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
 
