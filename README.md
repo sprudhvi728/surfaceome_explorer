@@ -18,9 +18,9 @@ No single reference resource completely captures the complexity of plasma membra
 
 ## overview
 
-Surfaceome Explorer is a web-based application that provides a framework for interpreting quantitative proteomics datasets through integrated surfaceome annotation, differential abundance analysis, visualization, and candidate prioritization.
+Surfaceome Explorer is a web-based application for interpreting quantitative proteomics datasets by integrating surfaceome annotation, differential abundance analysis, visualization, and candidate prioritization.
 
-The tool accepts pre-processed quantitative proteomics input (peptide reports from DIA-NN, FragPipe, MaxQuant, etc.) and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
+The tool accepts reports from secondary mass spectrometry analysis (peptide reports from DIA-NN, FragPipe, MaxQuant, etc.) and cross-references detected proteins against three curated surfaceome reference databases. It performs group-wise differential abundance analysis using Welch's *t*-test with a Benjamini–Hochberg false discovery rate correction, and presents results through an interactive dashboard that requires no installation, server, or programming.
 
 The entire application runs locally in the user's browser. No data is uploaded to any external server.
 
@@ -40,7 +40,7 @@ The entire application runs locally in the user's browser. No data is uploaded t
 - **Proportional Venn diagrams** — area-proportional SVG diagrams showing database co-annotation overlap and per-category group detection overlap, with hover interaction and click-to-filter
 - **Differential abundance analysis** — pairwise Welch's *t*-test between experimental groups, with Benjamini–Hochberg FDR correction; results presented in sortable tables and a volcano plot
 - **Volcano plot** — interactive scatter plot with configurable category filters, persistent gene-name labels on the most significant proteins, and PNG export
-- **Priority scoring** — a composite score integrating database membership, detection frequency, and statistical significance to rank candidate surface proteins
+- **Priority scoring** — the tool generates a composite score integrating database overlap, detection frequency, and statistical significance to rank candidate surface proteins
 - **Condition-specific protein detection** — identifies proteins detected exclusively in one experimental group
 - **All-in-one export** — per-table CSV downloads, PNG exports for all figures, and a formatted PDF summary report
 - **No data leaves the browser** — all computation is performed client-side in JavaScript; raw data is never transmitted
@@ -112,7 +112,7 @@ Surfaceome Explorer currently accepts **tab-separated value (.tsv) or comma-sepa
 
 ### group / sample mapping
 
-After upload, a mapping interface allows assignment of each sample column to an experimental group (e.g., *Control*, *Treatment*). At least two groups, each with at least two replicates, are required for differential analysis.
+After upload, a mapping interface lets you assign each sample column to an experimental group (e.g., *Control*, *Treatment*). At least two groups, each with at least two replicates, are required for differential analysis.
 
 > **compatibility note:** This input format is consistent with output from **MaxQuant** (`proteinGroups.txt`, filtered), **Perseus**, and similar tools. Direct parsing of raw mass spectrometry files (mzML, raw, wiff) is not currently supported. Future versions are planned to include direct mzML parsing; early-stage mzML reading has been prototyped and tested on small example files, but broader compatibility has not yet been validated.
 
@@ -155,7 +155,7 @@ A composite priority score is assigned to each detected surface protein, integra
 | High mean abundance (top quartile) | +2 |
 | Detected in all replicates | +2 |
 
-This score is intended to assist in prioritizing candidates for follow-up experiments and does not represent a validated biological ranking.
+This score is intended to help prioritize candidates for follow-up experiments and does not represent a validated biological ranking.
 
 ---
 
@@ -195,7 +195,7 @@ Surfaceome Explorer is designed to assist in the **exploratory analysis** of cel
 
 **High group-overlap Venn diagrams** (>85% shared proteins) indicate that the experimental conditions share a largely conserved surface proteome. Differences in the small unique-to-group fractions may be biologically meaningful even when modest in number.
 
-**Volcano plot significance** uses an uncorrected *p*-value threshold of 0.05 for visualization purposes. For biological conclusions, we recommend cross-referencing with the FDR-adjusted values in the differential tables. Proteins near the significance boundary should be treated as preliminary leads.
+**Volcano plot significance** uses an uncorrected *p*-value threshold of 0.05 for visualization purposes. For biological conclusions, we recommend cross-referencing with the FDR-adjusted values in the differential tables. Treat proteins near the significance boundary as preliminary leads.
 
 **Priority scores** are heuristic and unvalidated. They are intended to guide experimental prioritization, not to replace biological judgment or rigorous statistical inference.
 
@@ -209,7 +209,7 @@ Reference databases used in Surfaceome Explorer are derived from the following p
 
 - **SURFY:** Bausch-Fluck D, Goldmann U, Trefzer A, et al. (2018). The in silico human surfaceome. *PNAS* 115(46):E10988–E10997. https://doi.org/10.1073/pnas.1808790115
 - **UniProt:** The UniProt Consortium (2023). UniProt: the Universal Protein Knowledgebase in 2023. *Nucleic Acids Research* 51(D1):D523–D531. https://doi.org/10.1093/nar/gkac1052
-- **Membrane-Associated dataset:** Almén MS, Nordström KJ, Fredriksson R, Schiöth HB (2009). Mapping the human membrane proteome: a majority of the human membrane proteins can be classified according to function and evolutionary origin. *BMC Biology* 7:50. https://doi.org/10.1186/1741-7007-7-50
+- **Membrane-Associated dataset:** Almén MS, Nordström KJ, Fredriksson R, Schiöth HB (2009). Mapping the human membrane proteome: most human membrane proteins can be classified by function and evolutionary origin. *BMC Biology* 7:50. https://doi.org/10.1186/1741-7007-7-50
 
 statistical methodology:
 - **Welch's *t*-test:** Welch BL (1947). The generalization of "Student's" problem when several different population variances are involved. *Biometrika* 34(1–2):28–35.
