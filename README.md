@@ -200,7 +200,7 @@ Surfaceome Explorer is designed to assist in the **exploratory analysis** of cel
 **Priority scores** are heuristic and unvalidated. They are intended to guide experimental prioritization, not to replace biological judgment or rigorous statistical inference.
 
 
-
+This tool was developed with Claude Code; the tool design, analysis workflows, and statistical logic are my own.
 ---
 
 ## references
